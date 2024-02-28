@@ -90,6 +90,22 @@
     scroll-behavior: smooth;
   }
 }
+.portfolio-box {
+    position: relative;
+}
+
+.project-name {
+    position: absolute;
+    bottom: 0; /* Adjust as needed, e.g., if you want it at the top, use 'top' instead */
+    left: 0;
+    width: 100%; /* Ensure it takes the full width of the parent */
+    background: rgba(0, 0, 0, 0.7); /* Optional: Add a background for better visibility */
+    padding: -30px; /* Optional: Add padding for better styling */
+    color: #fff;
+}
+.button-container button:hover {
+    background-color: darkorange; /* Adjust the button hover color */
+}
 
 body {
   margin: 0;
@@ -445,14 +461,14 @@ legend + * {
   -webkit-appearance: textfield;
 }
 
-/* rtl:raw:
+rtl:raw:
 [type="tel"],
 [type="url"],
 [type="email"],
 [type="number"] {
   direction: ltr;
 }
-*/
+
 ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
