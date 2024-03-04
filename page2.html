@@ -28,6 +28,15 @@
             </div>
         </nav>
         <!-- Masthead-->
+        <style>
+            .code-container {
+                color: #000; 
+            }
+
+            .language-csharp {
+                color: #000;
+            }
+        </style>
         <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
@@ -36,32 +45,120 @@
                         <hr class="divider" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Hoi ik ben baran</p>
+                        <p class="text-white-75 mb-5"><!--Text--></p>
                         <a class="btn btn-primary btn-xl" href="#MyProjects">Project</a>
+                        <div class="code-container">
+                        </div>
                     </div>
                 </div>
-            </div>
         </header>
+
         <!-- Services-->
         <section class="page-section" id="MyProject">
             <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">My Projects</h2>
+                <h2 class="text-center mt-0">My Contributions</h2>
                 <hr class="divider" />
 
                 <div class="row">
                     <div class="col-lg-6">
                         <!-- Embedding a video -->
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://youtu.be/R2yY-NXYL5U" allowfullscreen></iframe>
-                        </div>
+                        <img src="assets/gif/DinoBot.gif" class="img-fluid" style="max-width: 120%; height: auto" alt="GIF" />
                     </div>
+                </div>
+                <p>
+                    Dinobot the fast bite is a third-person shooter game where you try to survive as a dino
+                    Shoot other dinosaurs to find the end and the abandoned city.
+                </p>
+                <div class="col-lg-6">
+                    <!-- C# Script -->
+                    <div class="code-container">
+                        <pre>
+public void enemyCharge()
+{
+    switch (currentState)
+    {
+        //Enemy starts at idle
+        case State.Idle:
+            Debug.Log("1");
+            // Check if the distance between the enemy and the player's charge transform is less than startIdleDistance
+            if (Vector3.Distance(transform.position, playerChargeTransform.position) < startIdleDistance)
+            {
+                //If the enemy is not frozen
+                if (freezeRot == false)
+                {
+                    // Rotate the enemy to face the player's charge transform
+                    transform.LookAt(playerChargeTransform);
+                    chargeCoolDown += Time.deltaTime; //Increase charge cooldown
+                }
+                //If the charge cooldown reaches its maximum value
+                if (chargeCoolDown >= chargeCooldownMax)
+                {
+                    // Set the enemy's state to Aggro
+                    SetState(State.Aggro);
+                    chargeCoolDown = 0; //Reset charge cooldown
+                }
+            }
+            break;
 
-                    <div class="col-lg-6">
-                        <!-- C# Script -->
-                        <div class="code-container">
-                            <pre><code class="language-csharp">
-        <!-- Call to action-->
-        
+        // is in aggro
+        case State.Aggro:
+            Debug.Log("2"); 
+            // If the distance between the enemy and the player's charge transform is less than or equal to chargeDistance
+            if (Vector3.Distance(transform.position, playerChargeTransform.position) <= chargeDistance)
+            {
+                freezeRot = true; //Freeze rotation of the enemy
+                rbEnemyCharge.constraints = RigidbodyConstraints.FreezeRotationY; //Freeze rotation along the Y-axis
+                Debug.Log("freeze rot"); // Log message for debugging
+                // Move the enemy forward based on chargeSpeed and deltaTime
+                transform.position += transform.forward * chargeSpeed * Time.deltaTime;
+                freezeChargeTimeRemaining += Time.deltaTime; //Increase freeze charge time remaining
+            }
+            //If the freeze charge time reaches its maximum value
+            if (freezeChargeTimeRemaining >= freezeChargeTimeMax)
+            {
+                //Set the enemy's state to Tired
+                SetState(State.Tired);
+                freezeChargeTimeRemaining = 0; // Reset freeze charge time
+            }
+            break;
+    }
+}
+
+</pre>
+                        <p>
+                            Here I have the states for the enemy that charges and gives a little more variation with different enemies.
+                        </p>
+                        <img src="assets/gif/Door.gif" class="img-fluid" style="max-width: 120%; height: auto" alt="GIF" />
+                        <pre>
+if (isOpen)
+{
+    //over a time opening
+    distance += Time.deltaTime * doorSpeed;
+    //rotation of the hinge door from start to end in a distance 
+    hinge.rotation = Quaternion.Slerp(startRotation, endRotation, distance);
+
+    // Ensure that the distance does not exceed 1
+    if (distance >= 1f)
+    {
+        distance = 1f;
+    }
+}
+else
+{
+    //over a time closing
+    distance += Time.deltaTime * doorSpeed;
+    //rotation of the hinge door from end to start in a distance 
+    hinge.rotation = Quaternion.Slerp(endRotation, startRotation, distance);
+
+    // Ensure that the distance does not exceed 1
+    if (distance >= 1f)
+    {
+        distance = 1f;
+    }
+}
+</pre>
+                        
+                        <!-- Call to action-->
                         <!-- * * * * * * * * * * * * * * *-->
                         <!-- * * SB Forms Contact Form * *-->
                         <!-- * * * * * * * * * * * * * * *-->
@@ -73,32 +170,32 @@
                         <!---->
                         <!-- This is what your users will see when the form-->
                         <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
+                        <div class="d-none" id="submitSuccessMessage">
                             <div class="text-center mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
+                                <div class="fw-bolder">Form submission successful!</div>
                                 To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                <br />
+                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                             </div>
                         </div>
                         <!-- Submit error message-->
                         <!---->
                         <!-- This is what your users will see when there is-->
                         <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                         <!-- Submit Button-->
-                        </div>
-                    </div>
-                    <div class="row gx-4 gx-lg-5 justify-content-center">
-                        <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                            <i class="bi bi-envelope-fill"></i>
-                        </div>
                     </div>
                 </div>
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                        <!--text-->
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2024 - Baran Atakan Canakci</div></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
