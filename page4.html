@@ -28,20 +28,31 @@
             </div>
         </nav>
         <!-- Masthead-->
+        <style>
+            .code-container {
+                color: #000; 
+            }
+
+            .language-csharp {
+                color: #000;
+            }
+        </style>
         <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">BedroomBlitz</h1>
+                        <h1 class="text-white font-weight-bold">itch.io</h1>
                         <hr class="divider" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5"><!-- text--></p>
+                        <p class="text-white-75 mb-5"><!--Text--></p>
                         <a class="btn btn-primary btn-xl" href="#MyProjects">Project</a>
+                        <div class="code-container">
+                        </div>
                     </div>
                 </div>
-            </div>
         </header>
+
         <!-- Services-->
         <section class="page-section" id="MyProject">
             <div class="container px-4 px-lg-5">
@@ -50,74 +61,29 @@
 
                 <div class="row">
                     <div class="col-lg-6">
-                        <img src="assets/gif/NightRacer.gif" class="ïmg-fluid" style="max-width: 80%; height: auto;" alt="GIF" />
+                        <!-- Embedding a video -->
+                        <img src="assets/img/Healthbar.png" class="img-fluid" style="max-width: 100%; height: auto" alt="IMG" />
                     </div>
-                    <div class="col-lg-6">
-                        <!-- Text content -->
-                    </div>
-                    <div class="col-lg-6">
-                        <!-- C# Script -->
+                </div>
+                <p>
+                   
+                </p>
+                <div class="col-lg-6">
+                    <!-- C# Script -->
+                    <div class="code-container">
+                        <pre>
+
+
+</pre>
                         <p>
-
-                            BedroomBlitz is a racing game where you race against time to set the fastest time and get to the top of the scoreboard..
+                           ......
                         </p>
-                        <div class="code-container">
-                            <pre>public void Drift(float _angle)
-{
-    if (Input.GetKey(KeyCode.LeftShift))
-    {
-        //Check if the local Z position of the wheel collider is less than 1.6
-        if (_wheelcollider.transform.localPosition.z < 1.6f) 
-        {
-            //Get the sideways friction of the wheel collider
-            WheelFrictionCurve sidewaysFriction = _wheelcollider.sidewaysFriction;
-
-            // Increase the friction if it's less than 1.6
-            if (sidewaysFriction.stiffness < 1.6f)
-            {
-                sidewaysFriction.stiffness *= 1.5f; 
-                sidewaysFriction.extremumSlip = 0.61f; 
-                sidewaysFriction.extremumValue = 0.32f; 
-                sidewaysFriction.asymptoteSlip = 1.81f; 
-                sidewaysFriction.asymptoteValue = 0.20f; 
-            }
-            //Assign the updated friction to the wheel collider
-            _wheelcollider.sidewaysFriction = sidewaysFriction;
-        }
+                        <img src="assets/img/Xpbar.png" class="img-fluid" style="max-width: 100%; height: auto" alt="IMG" />
+                        <pre>
 
 </pre>
-                            <p>
-                                Let more give the player the choice to make a turn in addition to steering.
-                            </p>
-                            <img src="assets/gif/snelheidsmeter.gif" class="ïmg-fluid" style="max-width: 80%; height: auto;" alt="GIF" />
-                            <pre>
-[SerializeField] private Rigidbody Target; //Reference to the Rigidbody component of the target object
-[SerializeField] private float maxSpeed = 0.0f;
-[SerializeField] private float minSpeedArrow;
-[SerializeField] private float maxSpeedArrow; 
-
-[Header ("UI")]
-[SerializeField] private Text speedText; 
-public RectTransform arrow; //Reference to the RectTransform component of the arrow
-private float speed = 0.0f; //Current speed of the target object
-
-private void Update()
-{
-    //Calculate the speed of the target object in kilometers per hour
-    speed = Target.velocity.magnitude * 3.6f;
-
-    //Update the speed text if it's not null
-    if (speedText != null)
-    {
-        speedText.text = ((int)(speed) + "");
-    }
-
-</pre>
-                        </div>
-                    </div>
-</section>
-        <!-- Call to action-->
-        
+                        
+                        <!-- Call to action-->
                         <!-- * * * * * * * * * * * * * * *-->
                         <!-- * * SB Forms Contact Form * *-->
                         <!-- * * * * * * * * * * * * * * *-->
@@ -147,7 +113,7 @@ private void Update()
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <!-- info extra-->
+                        <!--text-->
                     </div>
                 </div>
             </div>
