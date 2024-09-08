@@ -192,6 +192,13 @@ abbr[title] {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
 }
+.portfolio-box {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 50%; /* Maintain aspect ratio */
+}
+
 
 address {
   margin-bottom: 1rem;
@@ -10942,15 +10949,26 @@ hr.divider-light {
   }
 }
 
+/* Default for all .masthead sections */
 header.masthead {
-  padding-top: 10rem;
-  padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-masthead.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
 }
+
+/* Specific background for Home page */
+#BedroomBlitzHead {
+    background: url("assets/img/BedroomBlitz.png");
+}
+
+/* Specific background for About page */
+#aboutMasthead {
+    background: url("assets/img/AboutBackground.png");
+}
+
 header.masthead h1, header.masthead .h1 {
   font-size: 2.25rem;
 }
