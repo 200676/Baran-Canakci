@@ -1,134 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Creative - Start Bootstrap Theme</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap Icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <li class="nav-item"><a class="nav-link" href="#MyProject"></li>
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">Baran Atakan Canakci</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>VerminVilla</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <!-- Include C# language support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-csharp.min.js"></script>
+</head>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="fixed-top py-3 navbar-shrink" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <!-- Outer wrapper for full-page background with banners -->
+    <div>
+        <section class="page-section" id="MyProject" style="max-width: 900px; margin: 0 auto;">
+            <h1 class="text-center mt-0" style="font-size: 40px; margin-bottom: 5px;">Vermin Villa</h1>
+            <hr class="divider" style="margin-bottom: 5px;" />
+
+            <div style="max-width: 100%; height: auto; margin-left: 170px">
+                <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/HBFTvg4D0SQ"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                </iframe>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <style>
-            .code-container {
-                color: #000; 
+
+            <!-- My Contributions Section -->
+            <div class="text-center" style="margin-bottom: 10px;">
+                <h3 style="font-size: 24px; margin-top: 0;">My Contributions</h3>
+                <p style="font-size: 16px; margin: 5px auto; padding-bottom: 10px;">Night Racer is a game about driving a toy car through a bedroom and trying to complete the game by setting a high score with challenging loops and corners.</p>
+                <p style="font-size: 15px; margin: 5px auto; padding-bottom: 15px;">Second year groupproject made by: Dave, Vincent, Ben, Venessa, Tim & Baran </p>
+                <a href="url">https://github.com/200676/Portfolio/tree/main/Itch.io%20project</a>
+            </div>
+
+            <!-- Drift GIF and code section aligned right -->
+            <div class="text-right" style="margin-bottom: 10px; max-width: 70%; margin-left: 130px;">
+                <img src="assets/gif/UpgradeCards.gif" class="img-fluid" style="width: 100%; height: auto;" alt="Upgrade GIF" />
+                <button class="collapsible" style="color: white; background-color: black; cursor: pointer; padding: 8px; width: 100%; border: none; text-align: left; outline: none; font-size: 14px; margin-top: 5px;">Click Show/Hide Code</button>
+                <div class="content" style="display: none; background-color: #f4f4f4; padding: 8px; border: 1px solid #ddd; border-radius: 5px; margin-top: 5px;">
+                    <!-- Updated with Prism syntax highlighting for C# -->
+                    <pre class="language-csharp"><code>
+    [SerializeField] private GameObject[] cards;
+    [SerializeField] private Transform[] cardPositions;
+    [SerializeField] private GameObject cardPanel;
+    [SerializeField] private WeaponData weapondata;
+    [SerializeField] private Movement movementPlayer;
+    [SerializeField] private TextMeshProUGUI levelupNoification;
+    [SerializeField] private GameObject levelupObject;
+    private PlayerHealth playerhealth;
+    private PlayerHealthBar playerhealthbar;
+    private PlayerXp playerXp;
+    private bool levelupReady;
+    private Animator anim;
+
+    void Awake()
+    {
+    levelupReady = false;
+    if (cardPanel != null)
+    {
+    levelupObject.SetActive(false);
+    cardPanel.SetActive(false);
+    }
+    Time.timeScale = 1f;
+    playerXp = FindObjectOfType<PlayerXp>
+        ();
+        playerhealth = FindObjectOfType<PlayerHealth>
+            ();
+            playerhealthbar = FindObjectOfType<PlayerHealthBar>
+                ();
+                anim = FindObjectOfType<Animator>
+                    ();
+                    }
+                    private void Update()
+                    {
+                    if (playerXp.currentXp == playerXp.maxXp)
+                    {
+                    levelupReady = true;
+                    levelupNoification.enabled = true;
+                    CardsAnimation();
+                    playerXp.LevelPlayer();
+                    CheckingforLevelUp();
+                    }
+                    }
+                    private void CheckingforLevelUp()
+                    {
+                    if (levelupReady)
+                    {
+                    Debug.Log("Checkforlevelup");
+                    RandomUpgradeCards();
+                    }
+                    }
+
+                    public void RandomUpgradeCards()
+                    {
+                    List<GameObject>
+    shuffledCards = new List<GameObject>
+        (cards);
+        Shuffle(shuffledCards);
+
+        for (int i = 0; i < 3; i++)
+        {
+        GameObject selectedCard = shuffledCards[i];
+
+        selectedCard.transform.position = cardPositions[i].position;
+
+        HandleUpgrade(selectedCard);
+        }
+        }
+        private void Shuffle(List<GameObject>
+            list)
+            {
+            for (int i = list.Count - 1; i > 0; i--)
+            {
+            int randomIndex = Random.Range(0, i + 1);
+            GameObject temp = list[i];
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
+            }
+            }
+            private void HandleUpgrade(GameObject selectedCard)
+            {
+            switch (selectedCard.name)
+            {
+            case "Upgrade1":
+            Upgrade1();
+            break;
+            case "Upgrade2":
+            Upgrade2();
+            break;
+            case "Upgrade3":
+            Upgrade3();
+            break;
+            Debug.Log("Unknown card name: " + selectedCard.name);
+            break;
+            }
+            }
+            public void Upgrade1()
+            {
+            if (weapondata != null && cardPanel != null)
+            {
+            weapondata.Damage += 5;
+            Debug.Log("Pressed 1");
+            UpgradeComplete();
+            }
+            }
+            public void Upgrade2()
+            {
+            if (weapondata != null && cardPanel != null)
+            {
+            weapondata.WeaponSpeed += 2;
+            Debug.Log("Pressed 2");
+            UpgradeComplete();
+            }
+            }
+            public void Upgrade3()
+            {
+            if (weapondata != null && cardPanel != null)
+            {
+            if (playerhealth.currentHealth >= playerhealth.maxHealth)
+            {
+            playerhealth.currentHealth += 0;
+            playerhealthbar.slider.value += 0;
+            if (playerhealth.currentHealth <= 85)
+            {
+            playerhealth.currentHealth += 15;
+            playerhealthbar.slider.value += 15;
+            }
+            if (playerhealth.currentHealth <= playerhealth.remainingHealth)
+            {
+            playerhealth.maxHealth % playerhealth.currentHealth +
             }
 
-            .language-csharp {
-                color: #000;
             }
-        </style>
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">itch.io</h1>
-                        <hr class="divider" />
-                    </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5"><!--Text--></p>
-                        <a class="btn btn-primary btn-xl" href="#MyProjects">Project</a>
-                        <div class="code-container">
-                        </div>
-                    </div>
+            Debug.Log("Pressed 3");
+            UpgradeComplete();
+            }
+            }
+            public void HandleLevelUp()
+            {
+            if (levelupReady)
+            {
+            levelupObject.SetActive(true);
+            StartCoroutine(DelayCards());
+            }
+            }
+            IEnumerator DelayCards()
+            {
+            yield return new WaitForSeconds(1f);
+            Debug.Log("Activating level up panel");
+            cardPanel.SetActive(true);
+            yield return new WaitForSeconds(0.80f);
+            Time.timeScale = 0f;
+            }
+            public void UpgradeComplete()
+            {
+            if (cardPanel != null)
+            {
+            levelupObject.SetActive(false);
+            Debug.Log("upgrade complete");
+            Time.timeScale = 1f;
+            cardPanel.SetActive(false);
+            levelupReady = false;
+            }
+            }
+            private void CardsAnimation()
+            {
+            anim.SetBool("Appear", true);
+            anim.SetBool("Cardanim", true);
+            anim.SetBool("AppearBackground", true);
+            }
+</code></pre>
                 </div>
-        </header>
+                <p style="font-size: 15px; margin-top: 5px;">In the card script the cards gets through a forloop for three random cards each level up and gets linked up through a statemachine to be stopped once the card gets selected.</p>
+            </div>
 
-        <!-- Services-->
-        <section class="page-section" id="MyProject">
-            <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">My Contributions</h2>
-                <hr class="divider" />
+            <!-- Speedometer GIF and code section aligned right -->
+            <div class="text-right" style="margin-bottom: 10px; max-width: 70%; margin-left: 130px;">
+                <img src="assets/img/Healthbar.png" class="img-fluid" style="width: 100%; height: auto;" alt="Healthbar png" />
+                <button class="collapsible" style="color: white; background-color: black; cursor: pointer; padding: 8px; width: 100%; border: none; text-align: left; outline: none; font-size: 14px; margin-top: 5px;">Click Show/Hide Code</button>
+                <div class="content" style="display: none; background-color: #f4f4f4; padding: 8px; border: 1px solid #ddd; border-radius: 5px; margin-top: 5px;">
+                    <!-- Updated with Prism syntax highlighting for C# -->
+                    <pre class="language-csharp"><code>
+    public Slider slider;
+    public PlayerHealth health;
 
-                <div class="row">
-                    <div class="col-lg-6">
-                        <!-- Embedding a video -->
-                        <img src="assets/img/Healthbar.png" class="img-fluid" style="max-width: 100%; height: auto" alt="IMG" />
-                    </div>
+    private void Awake()
+    {
+    if (slider == null)
+    {
+    slider = GetComponent<Slider>
+        ();
+        }
+
+        if (health == null)
+        {
+        health = FindObjectOfType<PlayerHealth>
+            ();
+            }
+
+            if (health != null)
+            {
+            UpdateHealthbarMax(health.maxHealth);
+            }
+            }
+
+            public void UpdateHealthbarMax(int maxHealth)
+            {
+            slider.maxValue = maxHealth;
+            slider.value = maxHealth;
+            }
+
+            public void UpdateHealthBar(int currentHealth)
+            {
+            slider.value = currentHealth;
+            }
+</code></pre>
                 </div>
-                <p>
-                   
+                <p style="font-size: 15px; margin-top: 5px;">
+                    The player has 100 health and goes down when the player gets damage from enemy who mostly give 10-30 damage depends on enemy type which ultimately leads to the player dying.
                 </p>
-                <div class="col-lg-6">
-                    <!-- C# Script -->
-                    <div class="code-container">
-                        <pre>
+            </div>
+            <!-- Speedometer GIF and code section aligned right -->
+            <div class="text-right" style="margin-bottom: 10px; max-width: 70%; margin-left: 130px;">
+                <img src="assets/img/Xpbar.png" class="img-fluid" style="width: 100%; height: auto;" alt="Xpbar png" />
+                <button class="collapsible" style="color: white; background-color: black; cursor: pointer; padding: 8px; width: 100%; border: none; text-align: left; outline: none; font-size: 14px; margin-top: 5px;">Click Show/Hide Code</button>
+                <div class="content" style="display: none; background-color: #f4f4f4; padding: 8px; border: 1px solid #ddd; border-radius: 5px; margin-top: 5px;">
+                    <!-- Updated with Prism syntax highlighting for C# -->
+                    <pre class="language-csharp"><code>
+    [SerializeField] private Slider sliderXp;
+    [SerializeField] private TextMeshProUGUI levelText;
+    [SerializeField] private XpData xpdata;
+    public static PlayerXp Instance;
+
+    void Awake()
+    {
+    sliderXp.value = xpdata.currentXp;
+    Instance = this;
+    }
+
+    public void EnemyKilled(int xpGainedOnDeath)
+    {
+    xpdata.currentXp += xpGainedOnDeath;
+    xpdata.currentXp = Mathf.Min(xpdata.currentXp, xpdata.maxXp);
 
 
-</pre>
-                        <p>
-                           ......
-                        </p>
-                        <img src="assets/img/Xpbar.png" class="img-fluid" style="max-width: 100%; height: auto" alt="IMG" />
-                        <pre>
+    UpdateUI();
+    LevelPlayer();
+    }
+    private void UpdateUI()
+    {
+    if (sliderXp != null)
+    {
+    sliderXp.value = (float)xpdata.currentXp / xpdata.maxXp;
+    }
+    if (sliderXp != null && sliderXp.value == xpdata.maxXp)
+    {
+    xpdata.currentXp = 0;
+    sliderXp.value = 0;
+    }
+    }
+    private void LevelPlayer()
+    {
+    if (sliderXp.value == 1.0f)
+    {
+    xpdata.currentXp = 0;
+    xpdata.maxXp += 50;
+    xpdata.Level++;
 
-</pre>
-                        
-                        <!-- Call to action-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                        <!-- Submit Button-->
-                    </div>
+    UpdateUI();
+    UpdateLevelText();
+    }
+
+    }
+    private void UpdateLevelText()
+    {
+    if (levelText != null)
+    {
+    levelText.text = xpdata.Level.ToString();
+    }
+    }
+</code></pre>
                 </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <!--text-->
-                    </div>
-                </div>
+                <p style="font-size: 15px; margin-top: 5px;">This ensures that the player earns XP when an enemy is killed, and when the XP bar is full you can get a new power-up for a weapon or choose a new weapon.</p>
             </div>
         </section>
-        <!-- Footer-->
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </div>
+    <!-- CSS for side banners -->
+    <body id="page-top">
+        <!-- Left sidebar banner -->
+        <div class="sidebar left-banner"></div>
+
+        <!-- Right sidebar banner -->
+        <div class="sidebar right-banner"></div>
+
+        <!-- Rest of your content here -->
     </body>
+    <script>
+        // JavaScript for the collapsible functionality
+        document.querySelectorAll(".collapsible").forEach(button => {
+            button.addEventListener("click", function () {
+                this.classList.toggle("active");
+                let content = this.nextElementSibling;
+                content.style.display = content.style.display === "block" ? "none" : "block";
+            });
+        });
+    </script>
+
+    <div class="d-none" id="submitSuccessMessage">
+        <div class="text-center mb-3">
+            <div class="fw-bolder">Form submission successful!</div>
+            To activate this form, sign up at
+            <br />
+            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+        </div>
+    </div>
+    <!-- Submit error message-->
+    <!---->
+    <!-- This is what your users will see when there is-->
+    <!-- an error submitting the form-->
+    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+    <!-- Submit Button-->
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-lg-4 text-center mb-5 mb-lg-0">
+            <!-- info extra-->
+        </div>
+    </div>
+
+    <!-- Footer-->
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
 </html>

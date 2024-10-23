@@ -104,9 +104,72 @@
     color: #fff;
 }
 .button-container button:hover {
-    background-color: darkorange; /* Adjust the button hover color */
+    background-color: darkorange; 
+}
+/* Basic manual syntax highlighting example */
+
+    /* for keywords */
+    pre code .string {
+        color: #f1fa8c;
+    }
+    /* for strings */
+    pre code .comment {
+        color: #6272a4;
+        font-style: italic;
+    }
+    /* for comments */
+    pre code .keyword {
+        color: #ff79c6;
+    }
+    /* for keywords */
+    pre code .string {
+        color: #f1fa8c;
+    }
+    /* for strings */
+    pre code .comment {
+        color: #6272a4;
+        font-style: italic;
+    }
+/* for comments */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 1;
+}
+body {
+    background-color: #f0f0f0; /* Replace with your desired color */
 }
 
+.left-banner {
+    left: 0;
+    background-color: #d4edda; /* Left banner color */
+}
+
+.right-banner {
+    right: 0;
+    background-color: #d4edda; /* Right banner color */
+}
+
+/* Hide sidebars on small screens */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+
+.masthead {
+    position: relative;
+    z-index: 1; /* Adjust as necessary */
+    pointer-events: auto;
+}
+
+    .masthead .text-center {
+        position: relative;
+        z-index: 10; /* Bring this div with the button to the front */
+    }
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -196,7 +259,7 @@ abbr[title] {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 50%; /* Maintain aspect ratio */
+    padding-top: 5%; /* Maintain aspect ratio */
 }
 
 
@@ -206,7 +269,7 @@ address {
   line-height: inherit;
 }
 
-ol,
+
 ul {
   padding-left: 2rem;
 }
@@ -246,10 +309,49 @@ strong {
 small, .small {
   font-size: 0.875em;
 }
+.collapsible {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
 
+
+/* Styling the collapsible content */
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-left: 2px solid #4CAF50;
+    margin-top: 5px;
+}
+
+#portfolio {
+    scroll-margin-top: -680px
+}
+pre {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.img-fluid {
+    display: block;
+    margin-top: 5px;
+}
 mark, .mark {
-  padding: 0.1875em;
-  background-color: var(--bs-highlight-bg);
+    padding: 0.1875em;
+    background-color: var(--bs-highlight-bg);
 }
 
 sub,
@@ -698,6 +800,7 @@ progress {
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
+
 }
 .row > * {
   flex-shrink: 0;
@@ -705,7 +808,7 @@ progress {
   max-width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-top: var(--bs-gutter-y);
+  margin-bottom: 300px;
 }
 
 .col {
@@ -7796,8 +7899,8 @@ textarea.form-control-lg {
 }
 
 .py-3 {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
 }
 
 .py-4 {
@@ -8149,13 +8252,13 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+    --bs-bg-opacity: 1;
+    background-color: rgba(76 97 114) !important;
 }
 
 .bg-secondary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+    --bs-bg-opacity: 1;
+    background-color: rgba(76 97 114) !important;
 }
 
 .bg-success {
@@ -10888,9 +10991,9 @@ hr.divider-light {
 }
 
 #mainNav {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #fff;
-  transition: background-color 0.2s ease;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: white;
+    transition: background-color 0.5s ease;
 }
 #mainNav .navbar-brand {
   font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10912,17 +11015,17 @@ hr.divider-light {
 }
 @media (min-width: 992px) {
   #mainNav {
-    box-shadow: none;
-    background-color: transparent;
+    box-shadow: black;
+    background-color: grey;
   }
   #mainNav .navbar-brand {
-    color: rgba(255, 255, 255, 0.7);
+    color: #000;
   }
   #mainNav .navbar-brand:hover {
     color: #fff;
   }
   #mainNav .navbar-nav .nav-item .nav-link {
-    color: rgba(255, 255, 255, 0.7);
+    color: black;
     padding: 0 1rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
@@ -10949,19 +11052,15 @@ hr.divider-light {
   }
 }
 
-/* Default for all .masthead sections */
 header.masthead {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
-    background-size: cover;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), 
+    url("../assets/img/Background.jpg");
     background-position: center;
-    background-attachment: scroll;
     background-repeat: no-repeat;
-}
-
-/* Specific background for Home page */
-#BedroomBlitzHead {
-    background: url("assets/img/BedroomBlitz.png");
+    background-attachment: scroll;
+    background-size: cover;
 }
 
 /* Specific background for About page */
