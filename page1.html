@@ -125,6 +125,51 @@ private void Update() {
                 </div>
                 <p style="font-size: 15px; margin-top: 5px;">The speedometer calculates the min and max speed, updating speed to mph by multiplying the target velocity magnitude by 3.6 and displaying it as an integer.</p>
             </div>
+            
+            <div class="text-right" style="margin-bottom: 10px; max-width: 70%; margin-left: 130px;">
+                <img src="assets/gif/CamSwitch.gif" class="img-fluid" style="width: 100%; height: auto;" alt="Camera switchgif" />
+                <button class="collapsible" style="color: white; background-color: black; cursor: pointer; padding: 8px; width: 100%; border: none; text-align: left; outline: none; font-size: 14px; margin-top: 5px;">Click Show/Hide Code</button>
+                <div class="content" style="display: none; background-color: #f4f4f4; padding: 8px; border: 1px solid #ddd; border-radius: 5px; margin-top: 5px;">
+                    
+                    <pre class="language-csharp"><code>
+private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Trigger entered");
+        
+        if (other.gameObject.name == "RC Car Final Version")
+        {
+            Debug.Log("collsion");
+            SwitchCamera();
+        }
+    }
+    private void SwitchCamera()
+    {
+        if (playerFollowCam.Priority == 10)
+        {
+            playerFollowCam.Priority = 0;
+            switchCamera1.Priority = 10;
+        }
+    }
+private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "RC Car Final Version")
+        {
+            SwitchCameraBack();
+        }
+    }
+    private void SwitchCameraBack()
+    {
+        if (switchCamera1.Priority == 10)
+        {
+            switchCamera1.Priority = 0;
+            playerFollowCam.Priority = 10;
+        }
+    }
+                         </code></pre>
+                </div>
+                <p style="font-size: 15px; margin-top: 5px;">I used Cinemachine to switch cameras by triggering a Box Collider with ontrigger enter and exit that checks for contact with an object by name, adjusting the camera's priority. This way, the higher-priority camera automatically changes view of multiple views.</p>
+            </div>
+
         </section>
     </div>
     <!-- CSS for side banners -->
