@@ -144,12 +144,12 @@ body {
 
 .left-banner {
     left: 0;
-    background-color: #d4edda; /* Left banner color */
+    background-color: rgba(68, 85, 98, 1); /* Left banner color */
 }
 
 .right-banner {
     right: 0;
-    background-color: #d4edda; /* Right banner color */
+    background-color: rgba(68, 85, 98, 1); /* Right banner color */
 }
 
 /* Hide sidebars on small screens */
@@ -171,16 +171,16 @@ body {
         z-index: 10; /* Bring this div with the button to the front */
     }
 body {
-  margin: 0;
-  font-family: var(--bs-body-font-family);
-  font-size: var(--bs-body-font-size);
-  font-weight: var(--bs-body-font-weight);
-  line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
-  text-align: var(--bs-body-text-align);
-  background-color: beige;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: rgba(137, 158, 175, 1);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 hr {
@@ -11037,6 +11037,8 @@ hr.divider-light {
   #mainNav.navbar-shrink {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     background-color: #fff;
+    //opacity;0.1;
+    
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: #212529;
