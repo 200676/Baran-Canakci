@@ -94,7 +94,7 @@
     position: relative;
 }
  html, body{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .project-name {
