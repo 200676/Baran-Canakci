@@ -93,7 +93,9 @@
 .portfolio-box {
     position: relative;
 }
-
+body{
+    overflow-x: hidden;
+}
 .project-name {
     position: absolute;
     bottom: 0; /* Adjust as needed, e.g., if you want it at the top, use 'top' instead */
